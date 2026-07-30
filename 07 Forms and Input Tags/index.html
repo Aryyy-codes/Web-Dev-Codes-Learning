@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Forms and Input Tags </title>
+</head>
+
+<body>
+
+    <h1> Forms and Input Tags </h1>
+    <p> Forms ke 2 actions> div is used instead of br break for the division of the code. Either can be
+        used.</p>
+    <p> Here we're about to create 3 step form using div 3 times.</p>
+
+    <form action="post">
+        <div>
+            <input type="text" name="Name" placeholder="Name for Fill-up">
+        </div>
+
+        <P> Now comes the label tag:</P>
+        <p style="background-color: rgb(49, 255, 77);">
+            Label ke 'for' attribute me input ka 'id' likhte hain , name nahi. Isse label aur input aapas me connect ho jate hain.
+            Ab agar user "Enter Your Name:" wale text par click kare, to cursor automatically input box me aa jayega.
+        </p>
+        <div>
+            <label for="Name">Enter Your Name:</label>
+            <input type="text" id="Name" name="Username" placeholder="Name for Fill-up">
+        </div>
+        <div>
+            <select name="Car">
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Ford">Ford</option>
+            </select>
+        </div>
+    </form>
+
+</body>
+
+</html>

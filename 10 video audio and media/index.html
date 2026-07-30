@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video, Audio, and Media</title>
+</head>
+
+<body>
+
+    <div> <img src="Image.png" width="300" alt="Image"> </div>
+    <div> <video src="video.mp4" width="300" poster="Image.png" controls></video> </div>
+
+
+    <h4> We can have the thumbnail image for the video using the `poster` attribute, which in this case is the image
+        itself.</h4>
+    <h4> Along with this we can use more attributes like `preload`, `loop`, and `muted`for videos.</h4>
+    <h4 style="background-color: thistle;"> Preload attribute specifies when the media should be loaded. for example,
+        `preload="auto"` loads the video as soon as the page is loaded and `preload="none"` does not load the video
+        until the user clicks on it whereas `preload="metadata"` loads only the metadata.</h4>
+
+
+    <div> <audio src="music.mp3" controls></audio> </div>
+    <h4> In audio we have similar attributes like `preload`, `loop`, and `muted`.</h4>
+
+    <h3 style="background-color: thistle;"> Now next is svg. SVG is a vector graphics format like img, which is used for
+        creating scalable graphics. It is
+        used in the same kind of scenarios as raster images, but with the advantage of being infinitely scalable without
+        loss of quality.</h3>
+    <div> <svg width="300" height="300">
+            <rect x="50" y="50" width="200" height="200" fill="blue" />
+        </svg>
+    </div>
+    <div>
+        <img src="img-wrong.svg" width="300" alt="SVG Image">
+        <h3> Normally above image will not display correctly, but after saving it as a separate .svg file and
+            referencing it correctly using code, it will display properly.</h3>
+    </div>
+    <div> <img src="img.svg" width="300" alt="SVG Image"> </div>
+    <h2> Now it will display correctly </h2>
+
+    <h3 style="background-color: rgb(190, 56, 190);"> Then comes iFrames, which are used to embed another HTML page
+        within the current page.</h3>
+    <div> <iframe src="https://www.wikipedia.org" width="1100" height="600"></iframe> </div>
+
+</body>
+
+</html>

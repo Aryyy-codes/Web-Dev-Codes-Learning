@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts, Text & Color</title>
+
+    <!-- Google Font example - external font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Universal reset - same as previous lessons */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a2e;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Section boxes for each topic */
+        section {
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        section h2 {
+            color: #e94560;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e94560;
+            padding-bottom: 5px;
+        }
+
+        section p.note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* ==================== COLORS ==================== */
+
+        /* 1. Named colors */
+        .color-named {
+            color: tomato;
+            background-color: lightyellow;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* 2. Hex colors - #RRGGBB */
+        .color-hex {
+            color: #ffffff;
+            background-color: #2d6a4f;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* 3. RGB - rgb(red, green, blue) each 0-255 */
+        .color-rgb {
+            color: rgb(255, 255, 255);
+            background-color: rgb(67, 97, 238);
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* 4. RGBA - same as RGB + alpha (0 to 1 for transparency) */
+        .color-rgba-box {
+            background-color: rgba(255, 99, 71, 0.3);
+            border: 2px solid rgba(255, 99, 71, 1);
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* 5. HSL - hsl(hue 0-360, saturation %, lightness %) */
+        .color-hsl {
+            color: hsl(0, 0%, 100%);
+            background-color: hsl(280, 60%, 45%);
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* 6. HSLA - HSL with alpha transparency */
+        .color-hsla {
+            background-color: hsla(200, 80%, 50%, 0.25);
+            border: 2px dashed hsla(200, 80%, 50%, 1);
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* Gradient example (bonus - colors ka advanced use) */
+        .color-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            margin: 5px 0;
+            border-radius: 6px;
+        }
+
+        /* ==================== FONTS ==================== */
+
+        /* font-family - fallback stack (agar pehla font na mile to next try hoga) */
+        .font-serif {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .font-sans {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .font-monospace {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .font-cursive {
+            font-family: cursive;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        /* Google Font - Poppins (linked in head) */
+        .font-google-poppins {
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        /* Google Font - Roboto Slab */
+        .font-google-slab {
+            font-family: "Roboto Slab", serif;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        /* font-size units */
+        .size-px { font-size: 16px; margin: 5px 0; }
+        .size-em { font-size: 1.2em; margin: 5px 0; }
+        .size-rem { font-size: 1.2rem; margin: 5px 0; }
+        .size-percent { font-size: 120%; margin: 5px 0; }
+
+        /* font-weight */
+        .weight-light { font-weight: 300; margin: 5px 0; }
+        .weight-normal { font-weight: 400; margin: 5px 0; }
+        .weight-bold { font-weight: 700; margin: 5px 0; }
+        .weight-bolder { font-weight: 900; margin: 5px 0; }
+
+        /* font-style */
+        .style-normal { font-style: normal; margin: 5px 0; }
+        .style-italic { font-style: italic; margin: 5px 0; }
+        .style-oblique { font-style: oblique; margin: 5px 0; }
+
+        /* font shorthand: font-style font-variant font-weight font-size/line-height font-family */
+        .font-shorthand {
+            font: italic bold 20px/1.5 Georgia, serif;
+            margin: 5px 0;
+        }
+
+        /* ==================== TEXT PROPERTIES ==================== */
+
+        /* text-align */
+        .align-left { text-align: left; background: #eee; padding: 8px; margin: 5px 0; }
+        .align-center { text-align: center; background: #eee; padding: 8px; margin: 5px 0; }
+        .align-right { text-align: right; background: #eee; padding: 8px; margin: 5px 0; }
+        .align-justify {
+            text-align: justify;
+            background: #eee;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        /* text-decoration */
+        .deco-none { text-decoration: none; margin: 5px 0; }
+        .deco-underline { text-decoration: underline; margin: 5px 0; }
+        .deco-overline { text-decoration: overline; margin: 5px 0; }
+        .deco-line-through { text-decoration: line-through; margin: 5px 0; }
+        .deco-custom {
+            text-decoration: underline wavy #e94560;
+            margin: 5px 0;
+        }
+
+        /* text-transform */
+        .transform-upper { text-transform: uppercase; margin: 5px 0; }
+        .transform-lower { text-transform: lowercase; margin: 5px 0; }
+        .transform-capitalize { text-transform: capitalize; margin: 5px 0; }
+
+        /* letter-spacing & word-spacing */
+        .spacing-letter {
+            letter-spacing: 4px;
+            margin: 5px 0;
+        }
+
+        .spacing-word {
+            word-spacing: 12px;
+            margin: 5px 0;
+        }
+
+        /* line-height - lines ke beech ka gap */
+        .line-tight { line-height: 1.2; background: #eee; padding: 8px; margin: 5px 0; }
+        .line-normal { line-height: 1.6; background: #eee; padding: 8px; margin: 5px 0; }
+        .line-loose { line-height: 2.5; background: #eee; padding: 8px; margin: 5px 0; }
+
+        /* text-indent - pehli line ka indent */
+        .text-indent {
+            text-indent: 40px;
+            background: #eee;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        /* text-shadow: horizontal vertical blur color */
+        .text-shadow-simple {
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            margin: 10px 0;
+        }
+
+        .text-shadow-glow {
+            font-size: 24px;
+            color: #fff;
+            background-color: #1a1a2e;
+            padding: 10px;
+            text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+            margin: 10px 0;
+        }
+
+        /* white-space & text-overflow */
+        .nowrap-example {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: #eee;
+            padding: 8px;
+            width: 250px;
+            margin: 5px 0;
+        }
+
+        /* Demo card - sab combine karke ek real example */
+        .demo-card {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .demo-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .demo-card p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .demo-card a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .demo-card a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", monospace;
+            font-size: 0.9em;
+            color: #c7254e;
+        }
+
+        .label {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Fonts, Text & Color</h1>
+    <p class="intro">
+        Hey! This is Aryan — aaj hum CSS mein <strong>Colors</strong>, <strong>Fonts</strong>, aur <strong>Text properties</strong> seekhenge.
+    </p>
+
+    <!-- ==================== COLORS ==================== -->
+    <section>
+        <h2>1. Colors in CSS</h2>
+        <p class="note">
+            CSS mein color set karne ke 5 main tareeke hain. Sab same kaam karte hain — bas likhne ka format alag hai.
+        </p>
+
+        <span class="label">Named Color:</span>
+        <div class="color-named">color: tomato; background-color: lightyellow;</div>
+
+        <span class="label">Hex (#RRGGBB):</span>
+        <div class="color-hex">background-color: #2d6a4f; — sabse common format</div>
+
+        <span class="label">RGB:</span>
+        <div class="color-rgb">background-color: rgb(67, 97, 238); — red, green, blue (0-255)</div>
+
+        <span class="label">RGBA (with transparency):</span>
+        <div class="color-rgba-box">background-color: rgba(255, 99, 71, 0.3); — last value alpha hai (0 = transparent, 1 = solid)</div>
+
+        <span class="label">HSL:</span>
+        <div class="color-hsl">background-color: hsl(280, 60%, 45%); — hue, saturation, lightness</div>
+
+        <span class="label">HSLA (with transparency):</span>
+        <div class="color-hsla">background-color: hsla(200, 80%, 50%, 0.25); — HSL + alpha</div>
+
+        <span class="label">Gradient (Bonus):</span>
+        <div class="color-gradient">background: linear-gradient(135deg, #667eea, #764ba2); — do ya zyada colors blend</div>
+    </section>
+
+    <!-- ==================== FONTS ==================== -->
+    <section>
+        <h2>2. Fonts in CSS</h2>
+        <p class="note">
+            <code>font-family</code> se font choose hota hai. Hamesha fallback fonts likho — agar user ke system pe font na ho to next wala use hoga.
+        </p>
+
+        <span class="label">Serif (Times New Roman):</span>
+        <p class="font-serif">The quick brown fox jumps over the lazy dog.</p>
+
+        <span class="label">Sans-serif (Arial):</span>
+        <p class="font-sans">The quick brown fox jumps over the lazy dog.</p>
+
+        <span class="label">Monospace (Courier New) — code ke liye best:</span>
+        <p class="font-monospace">console.log("Hello World");</p>
+
+        <span class="label">Cursive:</span>
+        <p class="font-cursive">The quick brown fox jumps over the lazy dog.</p>
+
+        <span class="label">Google Font — Poppins:</span>
+        <p class="font-google-poppins">Modern websites mein Google Fonts bahut use hote hain.</p>
+
+        <span class="label">Google Font — Roboto Slab:</span>
+        <p class="font-google-slab">Head mein link tag se import karte hain, phir font-family mein use karte hain.</p>
+
+        <h3 style="margin-top: 20px; color: #333;">Font Size Units</h3>
+        <p class="size-px">16px — pixels, fixed size</p>
+        <p class="size-em">1.2em — parent element ke relative</p>
+        <p class="size-rem">1.2rem — root (html) ke relative, best practice</p>
+        <p class="size-percent">120% — percentage of parent</p>
+
+        <h3 style="margin-top: 20px; color: #333;">Font Weight</h3>
+        <p class="weight-light">font-weight: 300 (light)</p>
+        <p class="weight-normal">font-weight: 400 (normal)</p>
+        <p class="weight-bold">font-weight: 700 (bold)</p>
+        <p class="weight-bolder">font-weight: 900 (extra bold)</p>
+
+        <h3 style="margin-top: 20px; color: #333;">Font Style</h3>
+        <p class="style-normal">font-style: normal</p>
+        <p class="style-italic">font-style: italic</p>
+        <p class="style-oblique">font-style: oblique</p>
+
+        <h3 style="margin-top: 20px; color: #333;">Font Shorthand</h3>
+        <p class="font-shorthand">font: italic bold 20px/1.5 Georgia, serif; — ek line mein sab set</p>
+    </section>
+
+    <!-- ==================== TEXT PROPERTIES ==================== -->
+    <section>
+        <h2>3. Text Properties</h2>
+        <p class="note">
+            Text properties se hum text ki appearance control karte hain — alignment, decoration, spacing, shadow, etc.
+        </p>
+
+        <h3 style="color: #333;">text-align</h3>
+        <p class="align-left">Left aligned text</p>
+        <p class="align-center">Center aligned text</p>
+        <p class="align-right">Right aligned text</p>
+        <p class="align-justify">
+            Justified text — yeh paragraph lamba hai taaki justify ka effect clearly dikhe. Lines equal width ki hoti hain left se right tak.
+        </p>
+
+        <h3 style="margin-top: 15px; color: #333;">text-decoration</h3>
+        <p class="deco-none">text-decoration: none (links pe default remove karne ke liye)</p>
+        <p class="deco-underline">text-decoration: underline</p>
+        <p class="deco-overline">text-decoration: overline</p>
+        <p class="deco-line-through">text-decoration: line-through (strikethrough — sale price ke liye)</p>
+        <p class="deco-custom">text-decoration: underline wavy #e94560</p>
+
+        <h3 style="margin-top: 15px; color: #333;">text-transform</h3>
+        <p class="transform-upper">this becomes UPPERCASE</p>
+        <p class="transform-lower">THIS BECOMES lowercase</p>
+        <p class="transform-capitalize">every word gets capitalized</p>
+
+        <h3 style="margin-top: 15px; color: #333;">Spacing</h3>
+        <p class="spacing-letter">letter-spacing: 4px — letters ke beech gap</p>
+        <p class="spacing-word">word-spacing: 12px — words ke beech gap</p>
+
+        <h3 style="margin-top: 15px; color: #333;">line-height</h3>
+        <p class="line-tight">Tight line-height (1.2).<br>Second line yahan hai.<br>Teen lines tight dikhengi.</p>
+        <p class="line-normal">Normal line-height (1.6).<br>Second line yahan hai.<br>Readable spacing.</p>
+        <p class="line-loose">Loose line-height (2.5).<br>Second line yahan hai.<br>Bahut zyada gap.</p>
+
+        <h3 style="margin-top: 15px; color: #333;">text-indent</h3>
+        <p class="text-indent">
+            Pehli line indent hoti hai 40px se. Baaki lines normal rehti hain. Books aur articles mein commonly use hota hai paragraph shuru karne ke liye.
+        </p>
+
+        <h3 style="margin-top: 15px; color: #333;">text-shadow</h3>
+        <p class="text-shadow-simple">Simple shadow — text-shadow: 2px 2px 4px rgba(0,0,0,0.4)</p>
+        <p class="text-shadow-glow">Glow effect — neon jaisa dikhta hai</p>
+
+        <h3 style="margin-top: 15px; color: #333;">white-space & text-overflow</h3>
+        <p class="nowrap-example">
+            Yeh bahut lamba text hai jo box se bahar jaata hai lekin ellipsis (...) se cut ho jaata hai
+        </p>
+    </section>
+
+    <!-- ==================== COMBINED DEMO ==================== -->
+    <section>
+        <h2>4. Real-World Combined Example</h2>
+        <p class="note">
+            Neeche ek card hai jisme colors, fonts, aur text properties sab combine kiye gaye hain — aise hi real websites banate hain.
+        </p>
+
+        <div class="demo-card">
+            <h3>Web Developer</h3>
+            <p>
+                Fonts, colors, aur text styling se hi website ka look & feel banata hai.
+                <br><br>
+                <a href="#">Learn More →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== QUICK REFERENCE ==================== -->
+    <section>
+        <h2>5. Quick Reference Cheat Sheet</h2>
+        <ul style="padding-left: 25px; line-height: 2;">
+            <li><code>color</code> — text ka color</li>
+            <li><code>background-color</code> — background ka color</li>
+            <li><code>font-family</code> — font choose karo (fallback stack ke saath)</li>
+            <li><code>font-size</code> — text ka size (px, em, rem, %)</li>
+            <li><code>font-weight</code> — boldness (100-900)</li>
+            <li><code>font-style</code> — normal, italic, oblique</li>
+            <li><code>text-align</code> — left, center, right, justify</li>
+            <li><code>text-decoration</code> — underline, overline, line-through, none</li>
+            <li><code>text-transform</code> — uppercase, lowercase, capitalize</li>
+            <li><code>letter-spacing</code> — letters ke beech gap</li>
+            <li><code>word-spacing</code> — words ke beech gap</li>
+            <li><code>line-height</code> — lines ke beech vertical gap</li>
+            <li><code>text-indent</code> — pehli line ka indent</li>
+            <li><code>text-shadow</code> — shadow/glow effect</li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
