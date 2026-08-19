@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color specificity and cascade</title>
+
+    <style>
+        p {
+            color: rgb(214, 43, 43);
+        }
+        h2 {
+            color: red;
+        }
+
+        .first {
+            color: blue;
+        }
+
+        .second {
+            color: green;
+        }
+
+        .third {
+            color: rgb(0, 8, 82);
+        }
+
+        h4 {
+            color: rgb(79, 90, 244) !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2 class="first second third">
+        Here, I am trying to understand how color specificity and cascade works.
+    </h2>
+
+    <h1 class="first" style="color: rgb(221, 15, 221);">
+        Also the order of specificity matters. The more specific the selector, the higher priority it has in the
+        cascade. As here the
+        inline style has been used which overrides the class selector in this case.
+    </h1>
+
+    <h3 style="color:brown"> Inline style > ID seslector > Class selector >
+        Element selector
+    </h3>
+
+    <h4 style="color:rgb(185, 207, 15)"> There also exists &lt; !important &gt; which can be used after the color name in style to override the cascade. </h4> 
+
+    <p> We can also calculate the specificity of different selectors as follows:<br> 
+        Universal selector 0 <br>
+        Element selector 1 <br>
+        Class selector 10 <br>
+        ID selector 100 <br>
+        Inline style 1000 <br>
+        For multiple selectors, we can add the specificity values of each selector to get the total specificity. <br>
+    </p>
+
+</body>
+
+</html>

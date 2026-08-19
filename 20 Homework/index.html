@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div:first-of-type p:first-of-type {
+        /* div:first-of-type p:first-of-type {
             background-color: yellow;
             color: rgb(70, 70, 209);
         }
-
         div:first-of-type p:not(:first-of-type) {
             background-color: blue;
             color: white;
@@ -18,6 +17,18 @@
         div:nth-of-type(2) p {
             background-color: lightgray;
             color: black;
+        } */
+         
+         /*----------------The above code can be used for more specific styling.--------------- */
+
+        p{
+            background-color: blue;
+            color: white;
+        }
+
+        div p:first-child{
+            background-color: yellow;
+            color: navy;
         }
     </style>
 </head>

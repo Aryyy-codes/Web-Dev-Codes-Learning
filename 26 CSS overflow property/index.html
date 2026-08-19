@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow property</title>
+    <style>
+        .box {
+            border: 3px solid rgb(21, 0, 32);
+            background-color:rgb(127, 228, 127);
+            height: 20vh;
+            width: 30vw;
+            overflow: hidden auto;
+            /* Above will give auto scroll bar in y direction and hidden in x direction. */
+            overflow: scroll;
+            /* specificity gives priority to the last property. So, the scroll bar will be visible in both x and y direction. */
+            /* overflow property creates a scroll bar in case when the content exceeds the height of the box. It has the following values: visible, hidden, scroll, auto. The default value is visible. */
+            white-space: nowrap;
+            /* With the white-space nowrap property, the text will not wrap to the next line. Instead, it will continue on the same line horizontally. */
+            text-overflow: ellipsis;
+            /* With the text-overflow ellipsis property, if the text overflows the box, it will show (...) */
+           
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="container">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero temporibus quidem molestiae placeat architecto, ipsam sequi aliquam saepe officiis ea, quis dolore consequatur cum accusamus? Nostrum aliquid harum aut praesentium nihil eos voluptatum doloremque, neque sit minima inventore, alias error atque adipisci quam, modi natus? Illo rem, optio dolores praesentium amet ipsam ut tempora beatae. Laborum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, nulla omnis? Voluptates saepe accusantium aperiam hic consequuntur numquam corrupti asperiores quidem aspernatur pariatur ratione consectetur, quo sed dignissimos nulla eos impedit dolorem suscipit ipsam? Laudantium voluptate quas facere, nesciunt eos natus suscipit doloremque, quam illo beatae quibusdam consequuntur voluptatum sequi tenetur cupiditate officia quod. Consequatur, enim?
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+    <style>
+        nav ul li{
+            margin: 8px;
+            padding: 8px;
+            outline: 2px solid black;
+            border-radius: 25px;
+            background-color: rgb(45, 250, 127);
+            /* display: inline-block; */
+
+
+            list-style: devanagari;
+            list-style-type: "🔥";
+            list-style-position: inside;
+            /* This will include the points inside the box. If we use outside, then the points will be outside the box. As in the list there's always two components marker and the element.*/
+            
+            /* list-style: disc inside url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+            /* list-style-image: url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+        }
+        nav ul li:hover{
+            background-color: rgb(3, 5, 65);
+            color: rgb(238, 255, 0);
+            cursor: pointer;
+        }
+ 
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

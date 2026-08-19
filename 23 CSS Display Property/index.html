@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline and block Display Property</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid rgb(183, 80, 252);
+            display: inline-block;
+            /* Inline and Inline-block elements are displayed on the same line, but inline-block elements can have width and height properties set. This property specifies the display behavior of an element. It allows you to control how elements are displayed on the web page, whether they are block-level or inline-level. */
+            width: 345px;
+            padding: 45px;
+            margin: 34px;
+        }
+
+        .box1 {
+            /* display: none; */
+
+            /* visibility: hidden; */
+        }
+
+        pre {
+            margin: 34px;
+            padding: 20px;
+            border: 2px solid red;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        h2 {
+            margin: 34px;
+            padding: 20px;
+            border: 2px solid green;
+            font-weight: bold;
+            font-family: 'Baloo Bhai 2', sans-serif;
+            text-align:center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h2> 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"> Check this link for more information </a>
+    </h2>
+
+    <div class="box box1">
+        I am a box
+    </div>
+
+    <div class="box">also a nice box</div>
+
+    <span>I am a good</span>
+    <span>boy</span>
+
+    <pre>
+     display: none;
+     This tells the browser to not display the element at all, and it will not take up any space in the layout.
+     The element is completely removed from the document flow, and it will not be visible on the page.
+       
+     visibility: hidden;
+     This tells the browser to hide the element, but it will still take up space in the layout.
+     The element is still present in the document flow, but it is not visible on the page.
+     </pre>
+
+</body>
+
+</html>
